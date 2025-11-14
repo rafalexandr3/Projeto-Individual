@@ -1,0 +1,202 @@
+body{
+    padding: 0;
+    margin: 0;
+} 
+
+.containerNav{
+    display:flex;
+    width: 100vw;
+    height: 10vh;
+    background-color: #3A001E;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.containerNav .logo{
+    display: flex;
+    margin-left: 2vw;
+
+}
+
+.containerNav .navegacao{
+    display: flex;
+    justify-content: space-between;
+    width: 70vw;
+
+}
+
+.containerNav .navegacao a{
+    display: flex;
+    color: #EDE9D0;
+    font-family: 'Baloo';
+    justify-content: center;
+    text-decoration: none;
+}
+
+.imagem-fundo{
+display: flex;
+width: 100vw;   
+height: 80vh;
+opacity: 80%;
+background-image: url(../assets/monte-fuji.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.conteudo {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #EDE9D0;
+    gap: 10%;   
+    font-family: 'Baloo';
+}
+.conteudo .titulo{
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #3A001E;
+    font-weight: bolder;
+    margin-top:5%;
+    background-color: aquamarine;
+}
+.divisao-conteudo{
+display:flex;
+width: 100vw ;
+background-color: pink;
+}
+
+.conteudo-texto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: aqua;
+}
+/* .divisao{
+display: flex;
+width: 80vw;
+
+} */
+
+.imagem-conteudo{
+display: flex;
+background-color: blue;
+width:50%;
+background-image: url(../assets/studytired.jpg  ); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: 5vw;
+    margin-top:5vh;
+}
+
+.container-info{
+ background-color: #FF8599;
+ width: 100vw;
+ height: 100vh;
+}
+
+.container-info .titulo{
+    display: flex;
+    justify-content: center;
+    color: #EDE9D0;
+    font-weight: bolder;
+    width:100vw;
+    height: 25vh;
+   
+}
+
+.teste {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 100%;
+ height: 100%;
+ font-family: 'Baloo';
+ font-size: x-large;
+}
+.blocos{
+display:flex;
+flex-direction: column;
+height: 50vh;   
+margin-top: 5%;
+align-items: center;
+justify-content: center;
+}
+
+.texto-bloco{
+display:flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100%;
+color: #EDE9D0;
+font-family:'Baloo';
+font-size: large;
+}
+
+.container-blocos{
+    display:flex;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 85vh;
+}
+
+.blocos .bloco-imagem img{
+    width: 300px ;
+    height: 300px ;
+    display: flex;
+    justify-content: center;
+}
+
+.imagem-fundo2{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 100vw;   
+height: 100vh;
+background-image: url(../assets/books.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.chamada .imagem-fundo2 .texto-chamada{
+    display:flex;
+    font-family: 'Baloo';
+    font-size: x-large;
+    background-color: antiquewhite;
+    margin-bottom: 10%;
+}
+.chamada .imagem-fundo2 .texto-chamada span{
+   color: #3A001E;
+   display: flex;
+   flex-direction: row;
+
+}
+
+.botao{
+    display: flex;
+    background-color: #3A001E;
+    color: white;
+    border: none;
+    width: 15vw;
+    height: 10vh;   
+    justify-content: center;
+    align-items: center;
+    border-radius:20px;
+    font-family: 'Baloo';
+
+}
+
+.botao:hover{
+    cursor: pointer;
+}
+@font-face {
+    font-family: 'Baloo';
+    src: url(Baloo\ Bhaijaan.ttf);
+}

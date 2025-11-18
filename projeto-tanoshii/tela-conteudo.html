@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/conteudo.css">
-    <title>Document</title>
+    <title>Conteudo</title>
 </head>
 
 <body>
@@ -16,23 +16,39 @@
         <div class="side-bar">
             <div class="img">
 
-                <img src="https://img.freepik.com/vetores-premium/ilustracoes-vetoriais-do-logotipo-do-japao-adequadas-para-o-seu-logotipo_509354-327.jpg"
-                    alt="">
+                <img src="./assets/Group 3.png" alt="">
             </div>
-            <ul>
-                <li>
-                    <a href="#"> Inicio</a>
-                </li>
-                <li>
-                    <a href="#"> Hiragana</a>
-                </li>
-                <li>
-                    <a href="#"> Quiz</a>
-                </li>
-                <li>
-                    <a href="#"> Dashboard</a>
-                </li>
-            </ul>
+            <div class="menu-container">
+                <ul>
+                    <li>
+                        <a href="#"> Inicio</a>
+                    </li>
+                    <li>
+                        <span class="span-a" onclick="mostrarSub()"> Hiragana </span>
+                    </li>
+                    <li id="submenu" style="display: none;" class="sub">
+                        <ul>
+                            <li><a href="#"> A </a></li>
+                            <li><a href="#"> KA</a></li>
+                            <li><a href="#"> SA </a></li>
+                            <li><a href="#"> TA </a></li>
+                            <li><a href="#"> NA </a></li>
+                            <li><a href="#"> HA </a></li>
+                            <li><a href="#"> MA </a></li>
+                            <li><a href="#"> YA </a></li>
+                            <li><a href="#"> RA </a></li>
+                            <li><a href="#"> WA WO N </a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"> Quiz</a>
+                    </li>
+                    <li>
+                        <a href="#"> Dashboard</a>
+                    </li>
+                </ul>
+            </div>
         </div>
 
 
@@ -195,16 +211,467 @@
                     </div>
                 </div>
 
+
+
+
+                <div id="vogais">
+
+
+                    <div class="bloco">
+                        <div>
+                            <audio id="som-a"
+                                src="../projeto-tanoshii/assets/hiragana/sons-hiragana/kanasound-a.mp3"></audio>
+
+                            <button onclick="document.getElementById('som-a').play()">Ouvir pronúncia</button>
+                        </div>
+                        <div class="bloco-texto">
+                            <div class="img">
+                                <img src="../projeto-tanoshii/assets/hiragana/A/hiragana-a.png" alt="">
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora at, rerum,
+                                nostrum
+                                aperiam aut dolorem et unde vitae quis explicabo repudiandae non cum earum quod aliquam
+                                fugit fuga consequuntur!
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="bloco">
+                        <div>
+                            <audio id="som-i"
+                                src="../projeto-tanoshii/assets/hiragana/sons-hiragana/kanasound-i.mp3"></audio>
+
+                            <button onclick="document.getElementById('som-i').play()">Ouvir pronúncia</button>
+                        </div>
+
+                        <div class="bloco-texto">
+                            <div>
+                                <img src="../projeto-tanoshii/assets/hiragana/A/hiragana-i.png" alt="">
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora at, rerum,
+                                nostrum
+                                aperiam aut dolorem et unde vitae quis explicabo repudiandae non cum earum quod aliquam
+                                fugit fuga consequuntur!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bloco">
+                        <div>
+                            <audio id="som-u"
+                                src="../projeto-tanoshii/assets/hiragana/sons-hiragana/kanasound-u.mp3"></audio>
+
+                            <button onclick="document.getElementById('som-u').play()">Ouvir pronúncia</button>
+                        </div>
+                        <div class="bloco-texto">
+                            <div>
+                                <img src="../projeto-tanoshii/assets/hiragana/A/hiragana-u.png" alt="">
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora at, rerum,
+                                nostrum
+                                aperiam aut dolorem et unde vitae quis explicabo repudiandae non cum earum quod aliquam
+                                fugit fuga consequuntur!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bloco">
+                        <div>
+                            <audio id="som-e"
+                                src="../projeto-tanoshii/assets/hiragana/sons-hiragana/kanasound-e.mp3"></audio>
+
+                            <button onclick="document.getElementById('som-e').play()">Ouvir pronúncia</button>
+                        </div>
+                        <div class="bloco-texto">
+
+
+                            <div>
+                                <img src="../projeto-tanoshii/assets/hiragana/A/hiragana-e.png" alt="">
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora at, rerum,
+                                nostrum
+                                aperiam aut dolorem et unde vitae quis explicabo repudiandae non cum earum quod aliquam
+                                fugit fuga consequuntur!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bloco">
+                        <div>
+                            <audio id="som-o"
+                                src="../projeto-tanoshii/assets/hiragana/sons-hiragana/kanasound-o.mp3"></audio>
+
+                            <button onclick="document.getElementById('som-o').play()">Ouvir pronúncia</button>
+                        </div>
+                        <div class="bloco-texto">
+                            <div>
+                                <img src="../projeto-tanoshii/assets/hiragana/A/hiragana-o.png" alt="">
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora at, rerum,
+                                nostrum
+                                aperiam aut dolorem et unde vitae quis explicabo repudiandae non cum earum quod aliquam
+                                fugit fuga consequuntur!
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="Ka">
+
+
+                    <div class="bloco">
+                        <div>
+                            <audio id="som-ka"
+                                src="../projeto-tanoshii/assets/hiragana/sons-hiragana/kanasound-ka.mp3"></audio>
+
+                            <button onclick="document.getElementById('som-ka').play()">Ouvir pronúncia</button>
+                        </div>
+                        <div class="bloco-texto">
+                            <div class="img">
+                                <img src="../projeto-tanoshii/assets/hiragana/KA/hiragana-ka.png" alt="">
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora at, rerum,
+                                nostrum
+                                aperiam aut dolorem et unde vitae quis explicabo repudiandae non cum earum quod aliquam
+                                fugit fuga consequuntur!
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="bloco">
+                        <div>
+                            <audio id="som-ki"
+                                src="../projeto-tanoshii/assets/hiragana/sons-hiragana/kanasound-ki.mp3"></audio>
+
+                            <button onclick="document.getElementById('som-ki').play()">Ouvir pronúncia</button>
+                        </div>
+
+                        <div class="bloco-texto">
+                            <div>
+                                <img src="../projeto-tanoshii/assets/hiragana/KA/hiragana-ki.png" alt="">
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora at, rerum,
+                                nostrum
+                                aperiam aut dolorem et unde vitae quis explicabo repudiandae non cum earum quod aliquam
+                                fugit fuga consequuntur!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bloco">
+                        <div>
+                            <audio id="som-ku"
+                                src="../projeto-tanoshii/assets/hiragana/sons-hiragana/kanasound-ku.mp3"></audio>
+
+                            <button onclick="document.getElementById('som-ku').play()">Ouvir pronúncia</button>
+                        </div>
+                        <div class="bloco-texto">
+                            <div>
+                                <img src="../projeto-tanoshii/assets/hiragana/KA/hiragana-ku.png" alt="">
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora at, rerum,
+                                nostrum
+                                aperiam aut dolorem et unde vitae quis explicabo repudiandae non cum earum quod aliquam
+                                fugit fuga consequuntur!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bloco">
+                        <div>
+                            <audio id="som-ke"
+                                src="../projeto-tanoshii/assets/hiragana/sons-hiragana/kanasound-ke.mp3"></audio>
+
+                            <button onclick="document.getElementById('som-ke').play()">Ouvir pronúncia</button>
+                        </div>
+                        <div class="bloco-texto">
+
+
+                            <div>
+                                <img src="../projeto-tanoshii/assets/hiragana/KA/hiragana-ke.png" alt="">
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora at, rerum,
+                                nostrum
+                                aperiam aut dolorem et unde vitae quis explicabo repudiandae non cum earum quod aliquam
+                                fugit fuga consequuntur!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bloco">
+                        <div>
+                            <audio id="som-ko"
+                                src="../projeto-tanoshii/assets/hiragana/sons-hiragana/kanasound-ko.mp3"></audio>
+
+                            <button onclick="document.getElementById('som-ko').play()">Ouvir pronúncia</button>
+                        </div>
+                        <div class="bloco-texto">
+                            <div>
+                                <img src="../projeto-tanoshii/assets/hiragana/KA/hiragana-koO.png" alt="">
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora at, rerum,
+                                nostrum
+                                aperiam aut dolorem et unde vitae quis explicabo repudiandae non cum earum quod aliquam
+                                fugit fuga consequuntur!
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="Sa">
+
+
+                    <div class="bloco">
+                        <div>
+                            <audio id="som-sa"
+                                src="../projeto-tanoshii/assets/hiragana/sons-hiragana/kanasound-sa.mp3"></audio>
+
+                            <button onclick="document.getElementById('som-sa').play()">Ouvir pronúncia</button>
+                        </div>
+                        <div class="bloco-texto">
+                            <div class="img">
+                                <img src="../projeto-tanoshii/assets/hiragana/SA/hiragana-sa.png" alt="">
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora at, rerum,
+                                nostrum
+                                aperiam aut dolorem et unde vitae quis explicabo repudiandae non cum earum quod aliquam
+                                fugit fuga consequuntur!
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="bloco">
+                        <div>
+                            <audio id="som-shi"
+                                src="../projeto-tanoshii/assets/hiragana/sons-hiragana/kanasound-shi.mp3"></audio>
+
+                            <button onclick="document.getElementById('som-shi').play()">Ouvir pronúncia</button>
+                        </div>
+
+                        <div class="bloco-texto">
+                            <div>
+                                <img src="../projeto-tanoshii/assets/hiragana/SA/hiragana-shi.png" alt="">
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora at, rerum,
+                                nostrum
+                                aperiam aut dolorem et unde vitae quis explicabo repudiandae non cum earum quod aliquam
+                                fugit fuga consequuntur!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bloco">
+                        <div>
+                            <audio id="som-su"
+                                src="../projeto-tanoshii/assets/hiragana/sons-hiragana/kanasound-su.mp3"></audio>
+
+                            <button onclick="document.getElementById('som-su').play()">Ouvir pronúncia</button>
+                        </div>
+                        <div class="bloco-texto">
+                            <div>
+                                <img src="../projeto-tanoshii/assets/hiragana/SA/hiragana-su.png" alt="">
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora at, rerum,
+                                nostrum
+                                aperiam aut dolorem et unde vitae quis explicabo repudiandae non cum earum quod aliquam
+                                fugit fuga consequuntur!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bloco">
+                        <div>
+                            <audio id="som-se"
+                                src="../projeto-tanoshii/assets/hiragana/sons-hiragana/kanasound-se.mp3"></audio>
+
+                            <button onclick="document.getElementById('som-se').play()">Ouvir pronúncia</button>
+                        </div>
+                        <div class="bloco-texto">
+
+
+                            <div>
+                                <img src="../projeto-tanoshii/assets/hiragana/SA/hiragana-se.png" alt="">
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora at, rerum,
+                                nostrum
+                                aperiam aut dolorem et unde vitae quis explicabo repudiandae non cum earum quod aliquam
+                                fugit fuga consequuntur!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bloco">
+                        <div>
+                            <audio id="som-so"
+                                src="../projeto-tanoshii/assets/hiragana/sons-hiragana/kanasound-so.mp3"></audio>
+
+                            <button onclick="document.getElementById('som-so').play()">Ouvir pronúncia</button>
+                        </div>
+                        <div class="bloco-texto">
+                            <div>
+                                <img src="../projeto-tanoshii/assets/hiragana/SA/hiragana-so.png" alt="">
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora at, rerum,
+                                nostrum
+                                aperiam aut dolorem et unde vitae quis explicabo repudiandae non cum earum quod aliquam
+                                fugit fuga consequuntur!
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="Ta">
+
+
+                    <div class="bloco">
+                        <div>
+                            <audio id="som-ta"
+                                src="../projeto-tanoshii/assets/hiragana/sons-hiragana/kanasound-ta.mp3"></audio>
+
+                            <button onclick="document.getElementById('som-ta').play()">Ouvir pronúncia</button>
+                        </div>
+                        <div class="bloco-texto">
+                            <div class="img">
+                                <img src="../projeto-tanoshii/assets/hiragana/TA/hiragana-ta.png" alt="">
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora at, rerum,
+                                nostrum
+                                aperiam aut dolorem et unde vitae quis explicabo repudiandae non cum earum quod aliquam
+                                fugit fuga consequuntur!
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="bloco">
+                        <div>
+                            <audio id="som-chi"
+                                src="../projeto-tanoshii/assets/hiragana/sons-hiragana/kanasound-chi.mp3"></audio>
+
+                            <button onclick="document.getElementById('som-chi').play()">Ouvir pronúncia</button>
+                        </div>
+
+                        <div class="bloco-texto">
+                            <div>
+                                <img src="../projeto-tanoshii/assets/hiragana/TA/hiragana-chi.png" alt="">
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora at, rerum,
+                                nostrum
+                                aperiam aut dolorem et unde vitae quis explicabo repudiandae non cum earum quod aliquam
+                                fugit fuga consequuntur!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bloco">
+                        <div>
+                            <audio id="som-tsu"
+                                src="../projeto-tanoshii/assets/hiragana/sons-hiragana/kanasound-tsu.mp3"></audio>
+
+                            <button onclick="document.getElementById('som-tsu').play()">Ouvir pronúncia</button>
+                        </div>
+                        <div class="bloco-texto">
+                            <div>
+                                <img src="../projeto-tanoshii/assets/hiragana/TA/hiragana-tsu.png" alt="">
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora at, rerum,
+                                nostrum
+                                aperiam aut dolorem et unde vitae quis explicabo repudiandae non cum earum quod aliquam
+                                fugit fuga consequuntur!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bloco">
+                        <div>
+                            <audio id="som-te"
+                                src="../projeto-tanoshii/assets/hiragana/sons-hiragana/kanasound-te.mp3"></audio>
+
+                            <button onclick="document.getElementById('som-te').play()">Ouvir pronúncia</button>
+                        </div>
+                        <div class="bloco-texto">
+
+
+                            <div>
+                                <img src="../projeto-tanoshii/assets/hiragana/TA/hiragana-te.png" alt="">
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora at, rerum,
+                                nostrum
+                                aperiam aut dolorem et unde vitae quis explicabo repudiandae non cum earum quod aliquam
+                                fugit fuga consequuntur!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bloco">
+                        <div>
+                            <audio id="som-to"
+                                src="../projeto-tanoshii/assets/hiragana/sons-hiragana/kanasound-to.mp3"></audio>
+
+                            <button onclick="document.getElementById('som-to').play()">Ouvir pronúncia</button>
+                        </div>
+                        <div class="bloco-texto">
+                            <div>
+                                <img src="../projeto-tanoshii/assets/hiragana/TA/hiragana-to.png" alt="">
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora at, rerum,
+                                nostrum
+                                aperiam aut dolorem et unde vitae quis explicabo repudiandae non cum earum quod aliquam
+                                fugit fuga consequuntur!
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+
+
         </div>
 
+        <div>
 
-    </div>
-
-    <div>
-
-    </div>
+        </div>
 
 </body>
 
 </html>
+
+<script>
+    var exibindo = false;
+
+    function mostrarSub() {
+        if (exibindo) {
+            submenu.style.display = "none";
+        } else {
+            submenu.style.display = "flex";
+        }
+
+        exibindo = !exibindo; // true
+    }
+</script>

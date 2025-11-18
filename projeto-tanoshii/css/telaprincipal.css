@@ -1,29 +1,39 @@
-body{
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box; /* border-box representa o "limite" do conteúdo, onde não vai passar do tamanho definido*/
 } 
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+}
 
 .containerNav{
     display:flex;
-    width: 100vw;
-    height: 10vh;
-    background-color: #3A001E;
+    width: 100%;
+    height: 13vh;
+    padding: 0 2%;
     justify-content: space-between;
     align-items: center;
     color: white;
+    background-color: #3A001E;
 }
 
 .containerNav .logo{
     display: flex;
-    margin-left: 2vw;
-
+    height: 100%;
+    align-items: center;
+}
+.containerNav .logo img {
+    height: 80%;
 }
 
 .containerNav .navegacao{
+    gap: 5vw;
     display: flex;
     justify-content: space-between;
-    width: 70vw;
-
 }
 
 .containerNav .navegacao a{
@@ -36,8 +46,8 @@ body{
 
 .imagem-fundo{
 display: flex;
-width: 100vw;   
-height: 80vh;
+width: 100%;   
+height: 87vh;
 opacity: 80%;
 background-image: url(../assets/monte-fuji.jpg);
     background-repeat: no-repeat;
@@ -46,7 +56,7 @@ background-image: url(../assets/monte-fuji.jpg);
 }
 .conteudo {
     display: flex;
-    width: 100vw;
+    width: 100;
     height: 100vh;
     flex-direction: column;
     background-color: #EDE9D0;
@@ -56,46 +66,44 @@ background-image: url(../assets/monte-fuji.jpg);
 .conteudo .titulo{
     display: flex;
     justify-content: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Baloo';
     color: #3A001E;
     font-weight: bolder;
     margin-top:5%;
-    background-color: aquamarine;
+    font-size: 30px;
+    /* background-color: aquamarine; */
 }
 .divisao-conteudo{
 display:flex;
-width: 100vw ;
-background-color: pink;
+width: 100%;
+/* background-color: pink; */
+justify-content: space-around;
 }
 
 .conteudo-texto{
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-color: aqua;
+    /* background-color: aqua; */
+    width: 50%;
 }
-/* .divisao{
-display: flex;
-width: 80vw;
 
-} */
+.texto {
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: 'Baloo';
+    padding: 20px;
+}
 
 .imagem-conteudo{
 display: flex;
-background-color: blue;
 width:50%;
-background-image: url(../assets/studytired.jpg  ); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-left: 5vw;
-    margin-top:5vh;
+background-image: url(../assets/studytired.jpg  );  
 }
 
 .container-info{
  background-color: #FF8599;
- width: 100vw;
+ width: 100%;
  height: 100vh;
 }
 
@@ -104,7 +112,7 @@ background-image: url(../assets/studytired.jpg  );
     justify-content: center;
     color: #EDE9D0;
     font-weight: bolder;
-    width:100vw;
+    width:100%;
     height: 25vh;
    
 }
@@ -118,6 +126,7 @@ background-image: url(../assets/studytired.jpg  );
  font-family: 'Baloo';
  font-size: x-large;
 }
+
 .blocos{
 display:flex;
 flex-direction: column;
@@ -141,7 +150,7 @@ font-size: large;
 .container-blocos{
     display:flex;
     justify-content: space-evenly;
-    width: 100vw;
+    width: 100%;
     height: 85vh;
 }
 
@@ -157,7 +166,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-width: 100vw;   
+width: 100%;   
 height: 100vh;
 background-image: url(../assets/books.jpg);
     background-repeat: no-repeat;
@@ -198,5 +207,5 @@ background-image: url(../assets/books.jpg);
 }
 @font-face {
     font-family: 'Baloo';
-    src: url(Baloo\ Bhaijaan.ttf);
+    src: url(/projeto-tanoshii/BalooBhaijaan.ttf);
 }

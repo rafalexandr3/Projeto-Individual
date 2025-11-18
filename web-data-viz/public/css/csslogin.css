@@ -1,0 +1,127 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+} 
+
+.containerNav{
+    display:flex;
+    width: 100%;
+    height: 13vh;
+    padding: 0 2%;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: #3A001E;
+}
+.containerNav .logo{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.containerNav .logo img {
+    height: 80%;
+}
+
+.navegacao{
+    display: flex;
+    width: 50vw;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navegacao a{
+ color: white;
+ text-decoration: none;
+}
+
+.containerPrincipal {
+    display: flex;
+     width: 100%;
+     height: 80vh;
+
+}
+
+.imagem{
+    display: flex;
+    width: 60vw;
+    background-image: url(../assets/sakuralogin.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+
+.containerLogin{
+    display: flex;
+    background-color: #EDE9D0;
+    width: 40vw;
+    align-items: center;
+    
+
+}
+.logo-mensagem{
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.login{
+    background-color: #FF8599;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2vw;
+    margin-left:  7.5vw;
+    width: 25vw;
+    height: 50vh;
+    color:white;
+
+}
+.input-login{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3vw;
+}
+.input-senha{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4vh;
+}
+.input{
+    background-color: #EDE9D0;
+    border: none;
+    gap: 3vw;
+    width: 20vw;
+    display: flex;
+    border-radius: 3vw;
+    
+}
+    
+
+.botao{
+    display: flex;
+    background-color: #3A001E;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 10vw;
+    height: 5vh;
+    color: white;
+    border: none;
+    border-radius: 10px;
+
+
+}
+.botao:hover{
+    cursor: pointer;
+}
+.footer{
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    background-color: #3A001E;
+    
+}

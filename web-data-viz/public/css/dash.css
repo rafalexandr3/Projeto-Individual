@@ -1,7 +1,9 @@
-body {
+* {
     padding: 0;
     margin: 0;
-} 
+    box-sizing: border-box;
+
+}
 
 .conteudo-principal {
     display: flex;
@@ -9,8 +11,8 @@ body {
     font-weight: bolder;
     justify-content: center;
     align-items: center;
-
-}
+    background-size: cover;
+}   
 
 .conteudo-principal1 {
     display: flex;
@@ -21,6 +23,7 @@ body {
     margin-top: 20px;
     width: 60%;
     margin-left: 10%;
+    /* background-color:#EDE9D0 ; */
 }
 
 .side-bar {
@@ -78,28 +81,10 @@ body {
     border: none;
 }
 
-.conteudo-hiragana {
+.conteudo-principal1 .grafico{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 100%;
-}
-
-.bloco-conteudo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: justify;
-    width: 100%;
-    margin-bottom: 10px;
-
-}
-
-
-.bloco-conteudo .furigana-img {
-    display: flex;
-    justify-content: center;
+    height: 100%;
 }
 
 .titulo {
@@ -114,38 +99,7 @@ body {
     src: url(../BalooBhaijaan.ttf);
 }
 
-/* Conteudos do hiragana*/
-
-.bloco {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    min-height:  50%;
-    margin-top:10%;
-    align-items: center;
-    background-color: aqua;
-}
-
-.bloco button{
- display: flex;
- margin-left: 30%;
-}
-.bloco-texto {
-    display: flex;
-    flex-direction: row;
-    margin-left: 5%;
-}
-
-.bloco-texto img {
-    width:400px;  
-    height:400px;
-    justify-content: center;
-    background-color: aquamarine;
-}
-
-.bloco-texto .bloco-explicacao{
-    display: flex;
-    flex-direction: column;
-    margin-left: 4%;
-    margin-top:4%;
+.kpi{
+display: flex;
+justify-content: space-between;
 }

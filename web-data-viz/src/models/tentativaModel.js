@@ -11,9 +11,7 @@ function registrarTentativa(fkUsuario, fkQuiz, notas, pctAcertos,pctErros) {
     return database.executar(instrucaoSql);
 }
 
-// function buscarTentativa(){
 
-
- module.exports ={
+module.exports ={
      registrarTentativa
 };

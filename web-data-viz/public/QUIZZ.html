@@ -98,7 +98,7 @@
 
                 <div id="botoes" class="flex-colunar padding-8">
                     <button onclick="submeter()" id="btnSubmeter">Submeter resposta</button>
-                    <button onclick="avancar()" id="btnProx" disabled>Avançar para próxima questão</button>
+                    <!-- <button onclick="avancar()" id="btnProx" disabled>Avançar para próxima questão</button> -->
                     <!-- <button onclick="finalizar()" id="btnConcluir" disabled>Finalizar Quiz</button> -->
                     <button onclick="tentarNovamente()" id="btnTentarNovamente" disabled>Tentar novamente</button>
                 </div>
@@ -220,7 +220,7 @@
         preencherHTMLcomQuestaoAtual(0)
 
         btnSubmeter.disabled = false
-        btnProx.disabled = true
+        // btnProx.disabled = true
         // btnConcluir.disabled = true
         btnTentarNovamente.disabled = true
     }
@@ -254,12 +254,14 @@
             alert("Não há alternativas escolhidas. Escolha uma opção.")
         } else {
             btnSubmeter.disabled = true
-            btnProx.disabled = false
+            // btnProx.disabled = false
 
             habilitarAlternativas(false)
 
             checarResposta()
         }
+
+        avancar()
     }
 
     function habilitarAlternativas(trueOrFalse) {
@@ -273,7 +275,7 @@
     }
 
     function avancar() {
-        btnProx.disabled = true
+        // btnProx.disabled = true
         btnSubmeter.disabled = false
 
         desmarcarRadioButtons()
@@ -287,6 +289,7 @@
             
             finalizarJogo()
         }
+        
         limparCoresBackgroundOpcoes()
     }
 
@@ -420,7 +423,7 @@
 
     
 
-        btnProx.disabled = true
+        // btnProx.disabled = true
         btnSubmeter.disabled = true
         // btnConcluir.disabled = true
         btnTentarNovamente.disabled = false

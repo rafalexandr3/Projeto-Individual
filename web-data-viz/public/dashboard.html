@@ -5,71 +5,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/dash.css">
-    <title>Document</title>
+    <title>Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
 <body>
-    <div class="conteudo-principal">
 
+    <div class="side-bar">
+        <div class="img">
 
-        <div class="side-bar">
-            <div class="img">
+            <img src="./assets/Group 3.png" alt="">
+        </div>
 
-                <img src="./assets/Group 3.png" alt="">
-            </div>
+        <div class="menu-container">
+            <ul>
+                <li>
+                    <a href="./tela-conteudo.html"> Inicio</a>
+                </li>
+                <li>
+                    <a href="./hiragana.html"> Hiragana </a>
+                </li>
 
-            <div class="menu-container">
-                <ul>
-                    <li>
-                        <a href="./tela-conteudo.html"> Inicio</a>
-                    </li>
-                    <li>
-                        <a href="./hiragana.html"> Hiragana </a>
-                    </li>
-
-                    <!-- <li><a href="./hiragana.html"></a></li> -->
-                    <li>
-                        <a href="./QUIZZ.html"> Quiz</a>
-                    </li>
-                    <li>
-                        <a href="./dashboard.html"> Dashboard</a>
-                    </li>
-                </ul>
-                <!-- <a href="#">inicio</a>
+                <!-- <li><a href="./hiragana.html"></a></li> -->
+                <li>
+                    <a href="./QUIZZ.html"> Quiz</a>
+                </li>
+                <li>
+                    <a href="./dashboard.html"> Dashboard</a>
+                </li>
+            </ul>
+            <!-- <a href="#">inicio</a>
                 <a href="hiragana.html">Hiragana</a>
                 <a href="#">quiz</a>
                 <a href="#">dash</a> -->
-            </div>
         </div>
+    </div>
 
-        <div class="conteudo-principal1">
-            <div class="titulo">
-                <h1>Acompanhe seu progresso no estudo!</h1>
+    <div class="conteudo-principal">
+        <div class="titulo">
+            <h1 id="titulodash"></h1>
+        </div>
+        <div class="kpi">
+            <div class="kpi1">
+                <h2> total acertos</h2>
+                <span class="indicador">10</span>
             </div>
-            <div class="kpi">
-                <div>
-                    KPI 1
-                </div>
-                <div>
-                    kpi2
-                </div>
-                <div>
-                    kpi3
-                </div>
+            <div class="kpi2">
+                <h2> pct acertos</h2>
+                <span class="indicador">100%</span>
             </div>
-            <div class="grafico">
-                <canvas id="myChart"></canvas>
+            <div class="kpi3">
+                <h2> pct erros </h2>
+                <span class="indicador">0%</span>
             </div>
         </div>
+        <div class="grafico">
+            <canvas id="myChart"></canvas>
+        </div>
     </div>
-    </div>
+
+
 </body>
 
 </html>
 
 <script>
+
+    var nome = sessionStorage.NOME_USUARIO;
+    titulodash.innerHTML = `Acompanhe seu progresso no estudo, ${nome}!`
+
     const ctx = document.getElementById('myChart');
 
     new Chart(ctx, {
@@ -77,8 +82,8 @@
         data: {
             labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
             datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
+                label: 'Notas',
+                data: [ 2, 2, 3, 8, 9, 10],
                 borderWidth: 1
             }]
         },

@@ -8,17 +8,15 @@
     <title>Conteudo</title>
 </head>
 
-<body>
-
-
+<body onload="buscarTentativa()">
     <div class="conteudo-principal">
-
         <div class="side-bar">
             <div class="img">
 
                 <img src="./assets/Group 3.png" alt="">
             </div>
             <div class="menu-container">
+                <div id="id">ola</div>
                 <ul>
                     <li>
                         <a href="#"> Inicio</a>
@@ -35,9 +33,6 @@
                 </ul>
             </div>
         </div>
-
-
-
 
         <div class="conteudo-principal1">
             <div class="titulo">
@@ -59,7 +54,6 @@
             </div>
 
             <div class="conteudo-hiragana">
-
                 <div class="bloco-conteudo">
                     <div>
                         O hiragana (ひらがな) é um dos três sistemas de escrita do japonês, junto com o katakana e o kanji.
@@ -67,8 +61,6 @@
                         alfabeto silábico básico do idioma japonês e serve principalmente para representar palavras e
                         terminações gramaticais de origem japonesa. <br>
                     </div>
-
-
                     <div>
                         Ele pode ser utilizado para:<br>
 
@@ -80,7 +72,6 @@
                         </div>
 
                     </div>
-
                     <div>
                         2 - Partículas gramaticais:
                         <div>
@@ -113,9 +104,7 @@
                         atua como um auxiliador na estruturação de frases tanto como particula como também nas
                         conjugações de verbos em japonês, além de também ser utilizado para palavras de origem japonesa.
                     </div>
-
                 </div>
-
                 <div>
                     <div class="titulo">
                         <h3>Katakana (カタカナ)</h3>
@@ -153,9 +142,6 @@
 
                         Porém, a utilização do Kanji acaba sendo difícil pois ele possui muitas leituras (mas isso é um
                         tópico mais avançado, não se preocupe com isso agora). O que você precisa saber: <br>
-
-
-
                     </div>
 
                     <div>
@@ -196,18 +182,56 @@
                     </div>
                 </div>
             </div>
-
-
-
-                
-
-
         </div>
-
-    
-
     </div>
 
 </body>
 
 </html>
+
+<script>
+    var usuario = sessionStorage.NOME_USUARIO;
+    id.innerHTML = `Olá, <span style="color: #FF8599 ;">${usuario}</span` 
+
+    function buscarTentativa(){
+
+        var idUsuario = sessionStorage.ID_USUARIO;
+
+        
+         fetch(`/tentativa/buscarTentativa/${idUsuario}`, {
+
+        }).then(function (resposta) {
+            console.log(resposta)
+            console.log('Entrei no then da tentativa');
+
+            if (resposta.ok) {
+                console.log(resposta)
+
+                resposta.json().then(json => {
+
+                    console.log(json)
+                    var totalTentativas = json[0].totalTentativas;
+
+                    sessionStorage.TENTATIVAS = totalTentativas;
+
+                })
+
+                 
+            } else {
+
+                console.log("Erro ao tentar coletar dados de tentativas");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+            console.log('Entrei no catch');
+        })
+
+
+
+    }
+</script>

@@ -36,6 +36,10 @@ body {
 
 .side-bar .menu-container {
     width: 100%;
+    margin-top: 30px ;
+    color: white;
+    font-family: 'Baloo';
+    
 }
 
 .side-bar ul {

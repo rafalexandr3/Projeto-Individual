@@ -7,7 +7,13 @@ body {
     display: none;
     flex-direction: column;
 }
-
+.menu-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80vh;
+    
+}
 .conteudo-principal {
     display: flex;
     background-color: #EDE9D0;
@@ -15,7 +21,6 @@ body {
     justify-content: center;
     align-items: center;
     padding-bottom: 50px;
-
 }
 
 .conteudo-principal .texto-inicial {
@@ -241,4 +246,3 @@ cursor: pointer;
     justify-content: center;
     border-radius: 50%;
 }
-

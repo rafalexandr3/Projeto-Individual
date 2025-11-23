@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo - Quiz</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./css/quiz.css">
 </head>
 
 
@@ -16,7 +16,7 @@
         <div class="side-bar">
             <div class="img">
 
-                <!-- <img src="./Group 3.png" alt=""> -->
+                <img src="./assets/Group 3.png" alt="">
             </div>
             <div class="menu-container">
                 <ul>
@@ -206,6 +206,7 @@
     // let isUltima = numeroDaQuestaoAtual == quantidadeDeQuestoes-1 ? true : false
 
     function onloadEsconder() {
+         buscarTentativa();
         document.getElementById('pontuacao').style.display = "none"
         document.getElementById('jogo').style.display = "none"
     }
@@ -295,6 +296,7 @@
 
     function tentarNovamente() {
         // atualiza a página
+        var idTentativa = (Number(sessionStorage.TENTATIVAS)+1);
         var fkUsuario = sessionStorage.ID_USUARIO;
         var fkQuiz = 1;
         var pctAcertos = (certas*100)/ quantidadeDeQuestoes;
@@ -310,6 +312,7 @@
       body: JSON.stringify({
         // crie um atributo que recebe o valor recuperado aqui
         // Agora vá para o arquivo routes/usuario.js
+            idTentativaServer: idTentativa,
             fkUsuarioServer: fkUsuario,
             fkQuizServer: fkQuiz,
             notasServer: notas,
@@ -431,5 +434,47 @@
         
     }
 
+
+      function buscarTentativa(){
+
+        var idUsuario = sessionStorage.ID_USUARIO;
+
+        
+         fetch(`/tentativa/buscarTentativa/${idUsuario}`, {
+
+        }).then(function (resposta) {
+            console.log(resposta)
+            console.log('Entrei no then da tentativa');
+
+            if (resposta.ok) {
+                console.log(resposta)
+
+                resposta.json().then(json => {
+
+                    console.log(json)
+                    var totalTentativas = json[0].totalTentativas;  
+
+                    sessionStorage.TENTATIVAS = totalTentativas;
+
+                })
+
+                 
+            } else {
+
+                console.log("Erro ao tentar coletar dados de tentativas");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+            console.log('Entrei no catch');
+        })
+
+
+
+    }
     
 </script>

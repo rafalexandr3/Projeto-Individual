@@ -96,7 +96,7 @@ width: 100% ;
 margin-top: 50px;
 }
 
-.kpi1, .kpi2, .kpi3{
+.kpi1, .kpi2, .kpi3, .kpi4{
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -120,6 +120,12 @@ margin-top: 50px;
 
 .kpi3{
     background-color: rgb(235, 75, 75);
+    border-radius: 20px;
+    color:white;
+}
+
+.kpi4{
+    background-color: rgb(75, 166, 235);
     border-radius: 20px;
     color:white;
 }

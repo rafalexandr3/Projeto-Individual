@@ -8,7 +8,7 @@
     <title>Conteudo</title>
 </head>
 
-<body onload="buscarTentativa()">
+<body>
     <div class="conteudo-principal">
         <div class="side-bar">
             <div class="img">
@@ -210,7 +210,7 @@
                 resposta.json().then(json => {
 
                     console.log(json)
-                    var totalTentativas = json[0].totalTentativas;
+                    var totalTentativas = json[0].totalTentativas;  
 
                     sessionStorage.TENTATIVAS = totalTentativas;
 

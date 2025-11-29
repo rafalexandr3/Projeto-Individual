@@ -10,7 +10,7 @@
 
 </head>
 
-<body>
+<body onload="inicializarDashboard()">
 
     <div class="side-bar">
         <div class="img">
@@ -48,16 +48,22 @@
         </div>
         <div class="kpi">
             <div class="kpi1">
-                <h2> total acertos</h2>
-                <span class="indicador">10</span>
+                <h2> total tentativas</h2>
+                <span id="tentativa" class="indicador"></span>
             </div>
+
+            <div class="kpi4">
+                <h2> Melhor nota </h2>
+                <span id="melhor_nota" class="indicador"></span>
+            </div>
+
             <div class="kpi2">
-                <h2> pct acertos</h2>
-                <span class="indicador">100%</span>
+                <h2>Media notas</h2>
+                <span id='media' class="indicador"></span>
             </div>
             <div class="kpi3">
-                <h2> pct erros </h2>
-                <span class="indicador">0%</span>
+                <h2> pct acertos </h2>
+                <span id="acertos" class="indicador"></span>
             </div>
         </div>
         <div class="grafico">
@@ -71,28 +77,112 @@
 </html>
 
 <script>
+    var dados = 0;
 
-    var nome = sessionStorage.NOME_USUARIO;
-    titulodash.innerHTML = `Acompanhe seu progresso no estudo, ${nome}!`
 
-    const ctx = document.getElementById('myChart');
+    function buscarTentativa() {
+        var idUsuario = sessionStorage.ID_USUARIO;
 
-    new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        fetch(`/dashboard/obterDados/${idUsuario}`)
+            .then(function (response) {
+                if (response.ok) {
+                    response.json().then(function (resposta) {
+                        console.log(resposta)
+                        dados = resposta[0];
+                        mostrarKpi();
+                    })
+                }
+            })
+
+    }
+
+    function mostrarKpi() {
+        var kpiMelhorNota = dados.melhorNota;
+        var kpiTotalTentativas = dados.totalTentativas;
+        var kpiMediaNotas = dados.mediaNotas;
+        var kpiMediaAcertos = dados.MediaAcertos;
+
+
+        tentativa.innerHTML = `${kpiTotalTentativas}`
+        melhor_nota.innerHTML = `${(kpiMelhorNota).toFixed(2)}`
+        media.innerHTML = `${Number(kpiMediaNotas).toFixed(2)}`
+        acertos.innerHTML = `${(kpiMediaAcertos).toFixed(1)}`
+
+
+    }
+
+    function inicializarDashboard() {
+        buscarTentativa();
+        obterDadosGrafico();
+    }
+
+    function obterDadosGrafico() {
+        var idUsuario = sessionStorage.ID_USUARIO;
+        
+
+        fetch(`/dashboard/grafico/${idUsuario}`, { cache: 'no-store' })
+            .then(function (resposta) {
+                if (resposta.ok) {
+                    resposta.json().then(function (resposta) {
+                        
+                        console.log(resposta);
+                        gerarGrafico(resposta)
+                    });
+                } else {
+                    console.error('Deu xabu')
+                }
+            }).catch(function (error) {
+                console.error('Mano deu tudo errado pra pegar esse dado')
+            }
+
+            );
+    }
+
+    function gerarGrafico(resposta) {
+        var nome = sessionStorage.NOME_USUARIO;
+        titulodash.innerHTML = `Acompanhe seu progresso no estudo, ${nome}!`
+        var rotulo = [];    //armazena as tentativas
+
+        var dados = {
+            labels: rotulo,
             datasets: [{
                 label: 'Notas',
-                data: [ 2, 2, 3, 8, 9, 10],
+                data: [],
+                backgroundColor: 'rgba(255, 99, 132, 0.2)', // Cor de fundo das linhas
+                borderColor: 'rgba(255, 99, 132, 1)', // Cor da borda das linhas
                 borderWidth: 1
             }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
+        };
+
+        for (var i = 0; i < resposta.length; i++) {
+            var tentativa = resposta[i];
+
+            var numTentativa = tentativa.idTentativa;
+
+            var nota = tentativa.notas;
+
+            rotulo.push(`${numTentativa} tentativa`);
+            dados.datasets[0].data.push(nota)
         }
-    });
+
+        var config = {
+              type: 'line',
+              data: dados,
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+        }
+
+
+        var myChart = new Chart(
+              document.getElementById('myChart'),
+              config
+        );
+          
+        }
+    
 </script>

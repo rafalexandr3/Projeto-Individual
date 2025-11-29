@@ -13,11 +13,11 @@ function registrarTentativa(idTentativa,fkUsuario, fkQuiz, notas, pctAcertos, pc
 
 function buscarTentativa(idUsuario) {
     var instrucaoSql = ` 
- SELECT   
-COUNT(*) AS totalTentativas,
-MAX(notas) AS melhorNota,
-AVG(notas) AS mediaNotas
-FROM tentativa  where fkUsuario = ${idUsuario};`
+        SELECT   
+        COUNT(*) AS totalTentativas,
+        MAX(notas) AS melhorNota,
+        AVG(notas) AS mediaNotas
+        FROM tentativa where fkUsuario = ${idUsuario};`
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
 }

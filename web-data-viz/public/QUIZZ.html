@@ -287,16 +287,8 @@
             alert("Atenção... a próxima é a ultima questão!")
             preencherHTMLcomQuestaoAtual(numeroDaQuestaoAtual)
         } else {
-            
-            finalizarJogo()
-        }
-        
-        limparCoresBackgroundOpcoes()
-    }
 
-    function tentarNovamente() {
-        // atualiza a página
-        var idTentativa = (Number(sessionStorage.TENTATIVAS)+1);
+            var idTentativa = (Number(sessionStorage.TENTATIVAS)+1);
         var fkUsuario = sessionStorage.ID_USUARIO;
         var fkQuiz = 1;
         var pctAcertos = (certas*100)/ quantidadeDeQuestoes;
@@ -340,6 +332,14 @@
         // finalizarAguardar();
         return false;
       });
+            
+            finalizarJogo()
+        }
+        
+        limparCoresBackgroundOpcoes()
+    }
+
+    function tentarNovamente() {
 
       window.location.reload()
     }
